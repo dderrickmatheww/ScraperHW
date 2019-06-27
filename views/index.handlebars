@@ -1,0 +1,20 @@
+<div>
+    <h1>Read the latest from 'The New York Times'</h1>
+    <div class="row">
+        <div class="col">
+            <h5>Click on 'Scrape' to get th latst articles</h5>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        {{#each article}}
+        <div class="content">
+            <h4>{{this.title}}</h4>
+            <a href="/readArticle/{{this._id}}" id="btnSignUp">Read article</a>
+        </div>
+        {{/each}}
+    </div>
+</div>

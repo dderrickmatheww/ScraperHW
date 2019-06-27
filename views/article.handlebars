@@ -1,0 +1,52 @@
+<div class="row">
+    <h3>{{article.title}}</h3>
+    <h5>{{body}}</h5>
+</div>
+
+<div class="row">
+    <div class="col"></div>
+    <form action="/comment/{{article._id}}" method="POST">
+        <h5>
+            Comment on this article
+        </h5>
+        <div class="row">
+            <div class="col">
+                <div>
+                    <i>perm_identity</i>
+                    <input type="text" placeholder="Name" name="name" >
+                </div>
+            </div>
+            <div>
+                <div class="col">
+                    <i>comment</i>
+                    <input type="text" placeholder="Comment" name="comment">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <center>
+                    <input type="submit" value="Submit">
+                </center>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="col">
+
+    </div>
+    <div class="col">
+        <h5>Comments: </h5>
+        {{#if article.comment}}
+        {{#each article.comment}}
+        <div class="content">
+            <p>{{name}}</p>
+            <p>{{body}}</p>
+        </div>
+        {{/each}}
+        {{else}}
+        <p>No comments yet.</p>
+        {{/if}}
+    </div>
+</div>
