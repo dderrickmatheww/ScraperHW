@@ -135,12 +135,12 @@ router.get("/readArticle/:id", function(req, res) {
 
 
 router.post("/comment/:id", function(req, res) {
-  
+    var user = req.body.name;
     var content = req.body.comment;
     var articleId = req.params.id;
 
     var commentObj = {
-        name: req.body.user,
+        name: user,
         body: content
     };
 

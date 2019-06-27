@@ -1,20 +1,24 @@
-<div>
-    <h1>Read the latest from 'The New York Times'</h1>
+<div class="jumbotron mainHeader">
+    <h1 class="text-center">Read the latest from 'The Verge'</h1>
     <div class="row">
-        <div class="col">
+        <div class="col text-center">
             <h5>Click on 'Scrape' to get th latst articles</h5>
         </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col"></div>
-    <div class="col">
-        {{#each article}}
-        <div class="content">
-            <h4>{{this.title}}</h4>
-            <a href="/readArticle/{{this._id}}" id="btnSignUp">Read article</a>
+<div class="row mt-5">
+    <div class="col text-center">
+        <div class="row">
+            
+            {{#each article}}
+                <div class="col-6 mt-5 border-bottom pb-3">
+                    <h4>{{this.title}}</h4>
+                </div>
+                <div class="col-6 mt-5 border-bottom pb-3">
+                    <a href="/readArticle/{{this._id}}" id="btnSignUp">Read article</a>
+                </div>
+            {{/each}}
         </div>
-        {{/each}}
     </div>
 </div>

@@ -9,6 +9,8 @@ const Router = require("./routes");
 
 app.use(logger("dev"));
 
+app.use(express.static("public"));
+
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
@@ -22,7 +24,6 @@ db.once("open", function(){
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Make public a static folder
-app.use(express.static("public"));
 
 app.use("/", Router);
 

@@ -1,0 +1,9 @@
+.jumbotron {
+    background-image: url(/images/images1.jpg);
+    background-size: cover;
+    font-family: 'B612 Mono', monospace;
+    color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
+}
